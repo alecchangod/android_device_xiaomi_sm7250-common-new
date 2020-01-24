@@ -460,7 +460,7 @@ ro.com.android.dataroaming=false
 PRODUCT_SYSTEM_PROPERTIES += \
 persist.radio.snapshot_enabled=0 \
 persist.radio.snapshot_timer=0 \
-ro.telephony.default_network=33,33 \
+ro.telephony.default_network=27,27 \
 ro.telephony.iwlan_operation_mode=default
 
 PRODUCT_PRODUCT_PROPERTIES += \
