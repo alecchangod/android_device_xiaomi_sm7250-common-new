@@ -206,6 +206,10 @@ persist.vendor.color.matrix=2
 PRODUCT_SYSTEM_PROPERTIES += \
 persist.vendor.cne.feature=1
 
+# Dalvik
+PRODUCT_SYSTEM_PROPERTIES += \
+dalvik.vm.dex2oat64.enabled=true
+
 # DPM
 PRODUCT_SYSTEM_PROPERTIES += \
 persist.vendor.dpm.feature=1
