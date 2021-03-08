@@ -226,6 +226,10 @@ persist.vendor.qfp=false
 PRODUCT_VENDOR_PROPERTIES += \
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
+# FUSE passthrough
+PRODUCT_VENDOR_PROPERTIES += \
+persist.sys.fuse.passthrough.enable=true
+
 # Fwk detect
 PRODUCT_VENDOR_PROPERTIES += \
 ro.vendor.qti.va_aosp.support=1
