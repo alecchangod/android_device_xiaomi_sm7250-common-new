@@ -259,6 +259,15 @@ debug.sf.latch_unsignaled=1 \
 debug.sf.predict_hwc_composition_strategy=0 \
 persist.vendor.color.matrix=2
 
+# Display Refresh Rate
+PRODUCT_VENDOR_PROPERTIES += \
+ro.surface_flinger.set_idle_timer_ms?=4000 \
+ro.surface_flinger.set_touch_timer_ms?=200 \
+ro.surface_flinger.set_display_power_timer_ms?=1000 \
+ro.surface_flinger.use_content_detection_for_refresh_rate=true \
+vendor.display.defer_fps_frame_count?=2
+
+
 # DPM
 PRODUCT_SYSTEM_PROPERTIES += \
 persist.vendor.dpm.feature=1
