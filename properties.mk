@@ -159,6 +159,9 @@ ro.bluetooth.a2dp_offload.supported=true \
 ro.vendor.bluetooth.wipower=false \
 vendor.qcom.bluetooth.soc=cherokee
 
+PRODUCT_SYSTEM_PROPERTIES += \
+persist.vendor.btstack.enable.twsplus=true
+
 # Blur
 PRODUCT_SYSTEM_PROPERTIES += \
 ro.surface_flinger.supports_background_blur=1 \
