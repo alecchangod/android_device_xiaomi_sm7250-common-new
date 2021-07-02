@@ -50,7 +50,7 @@ public class BootCompletedReceiver extends BroadcastReceiver {
         } catch (Exception e) {
             Log.d(TAG, "Dirac is not present in system");
         }
-        DozeUtils.checkDozeService(context);
+        DozeUtils.onBootCompleted(context);
         ThermalUtils.startService(context);
 
         boolean dcDimmingEnabled = sharedPrefs.getBoolean(DC_DIMMING_ENABLE_KEY, false);

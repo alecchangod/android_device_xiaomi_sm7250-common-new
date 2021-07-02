@@ -170,6 +170,10 @@ on boot
     # default country code
     setprop ro.boot.wificountrycode 00
 
+    # Set doze mode permissions
+    chown system system /sys/devices/platform/soc/soc:qcom,dsi-display/doze_mode
+    chmod 0660 /sys/devices/platform/soc/soc:qcom,dsi-display/doze_mode
+
 on property:sys.boot_completed=1
     # Disable statsd service to prevent additional battery drain
     stop statsd

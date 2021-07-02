@@ -18,6 +18,10 @@
     <!-- Ambient settings -->
     <string name="ambient_enable">Use Ambient display</string>
 
+    <!-- Doze brightness -->
+    <string name="doze_brightness_title">Doze brightness</string>
+    <string name="doze_brightness_summary">%s mode is enabled</string>
+
     <!-- Thermal Profiles -->
     <string name="thermal_title">Thermal Profiles</string>
     <string name="thermal_summary">Adjust per-app thermal profiles for optimum performance</string>

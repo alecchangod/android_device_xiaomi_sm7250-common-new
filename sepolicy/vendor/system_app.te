@@ -1,3 +1,4 @@
+type sysfs_doze, sysfs_type, fs_type;
 
 # Aware
 get_prop(system_app, vendor_aware_available_prop)
@@ -28,3 +29,6 @@ allow system_app {
     system_suspend_control_service
     system_suspend_control_internal_service
 }:service_manager { find };
+
+# Doze brightness
+allow system_app sysfs_doze:file rw_file_perms;
