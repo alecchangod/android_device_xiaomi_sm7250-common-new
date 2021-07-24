@@ -123,7 +123,7 @@ ro.qc.sdk.audio.ssr=false \
 tunnel.audio.encode=true
 
 PRODUCT_ODM_PROPERTIES += \
-vendor.audio.offload.buffer.size.kb=32 \
+vendor.audio.offload.buffer.size.kb=256 \
 vendor.audio.offload.gapless.enabled=true \
 persist.audio.button_jack.profile=volume \
 persist.audio.button_jack.switch=0 \
