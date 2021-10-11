@@ -49,7 +49,7 @@
         <activity
             android:name=".thermal.ThermalActivity"
             android:theme="@style/Theme.SubSettingsBase"
-            android:exported="false"
+            android:exported="true"
             android:label="@string/thermal_title">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
@@ -67,7 +67,8 @@
 
         <activity
             android:name=".speaker.ClearSpeakerActivity"
-            android:label="@string/clear_speaker_title">
+            android:label="@string/clear_speaker_title"
+            android:exported="true">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
