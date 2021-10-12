@@ -17,12 +17,15 @@
 
 package org.lineageos.settings.doze;
 
+import static android.provider.Settings.Secure.DOZE_ALWAYS_ON;
+import static android.provider.Settings.Secure.DOZE_ENABLED;
+
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.hardware.display.AmbientDisplayConfiguration;
 import android.hardware.Sensor;
 import android.hardware.SensorManager;
+import android.hardware.display.AmbientDisplayConfiguration;
 import android.os.PowerManager;
 import android.os.SystemClock;
 import android.os.UserHandle;
@@ -34,9 +37,6 @@ import androidx.preference.PreferenceManager;
 
 import org.lineageos.settings.R;
 import org.lineageos.settings.utils.FileUtils;
-
-import static android.provider.Settings.Secure.DOZE_ALWAYS_ON;
-import static android.provider.Settings.Secure.DOZE_ENABLED;
 
 public final class DozeUtils {
     private static final String TAG = "DozeUtils";
@@ -139,8 +139,8 @@ public final class DozeUtils {
         } else {
             if (DEBUG)
                 Log.d(TAG, "Launch doze pulse");
-        context.sendBroadcastAsUser(
-                new Intent(DOZE_INTENT), new UserHandle(UserHandle.USER_CURRENT));
+            context.sendBroadcastAsUser(
+                    new Intent(DOZE_INTENT), new UserHandle(UserHandle.USER_CURRENT));
         }
     }
 
