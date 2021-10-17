@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
      Copyright (C) 2015-2016 The CyanogenMod Project
-                   2017-2021 The LineageOS Project
+                   2017-2024 The LineageOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -37,7 +37,9 @@
         android:persistent="true"
         android:theme="@style/Theme.SubSettingsBase">
 
-        <receiver android:name=".BootCompletedReceiver">
+        <receiver
+            android:name=".BootCompletedReceiver"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -45,17 +47,20 @@
         </receiver>
 
         <service android:name=".doze.DozeService"
+            android:exported="false"
                  android:permission="XiaomiDozeService">
         </service>
 
         <service
             android:name=".thermal.ThermalService"
-            android:permission="ThermalService">
-        </service>
+            android:exported="true"
+            android:permission="ThermalService" />
 
         <activity
             android:name=".doze.DozeSettingsActivity"
-            android:label="@string/ambient_display_title">
+            android:exported="false"
+            android:label="@string/ambient_display_title"
+            android:enabled="false">
             <intent-filter>
                 <action android:name="org.lineageos.settings.device.DOZE_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -64,8 +69,9 @@
 
         <activity
             android:name=".thermal.ThermalActivity"
-            android:label="@string/thermal_title"
-            android:theme="@style/Theme.SubSettingsBase">
+            android:theme="@style/Theme.SubSettingsBase"
+            android:exported="false"
+            android:label="@string/thermal_title">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>
@@ -81,4 +87,5 @@
         </activity>
 
     </application>
+
 </manifest>
