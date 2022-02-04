@@ -156,6 +156,9 @@ TARGET_BOARD_PLATFORM := lito
 # Power
 TARGET_TAP_TO_WAKE_NODE := "/sys/touchpanel/double_tap"
 
+# Properties
+TARGET_PRODUCT_PROP += $(COMMON_PATH)/product.prop
+
 # Recovery
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
