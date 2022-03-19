@@ -196,13 +196,14 @@ dalvik.vm.heaptargetutilization=0.75
 
 # Dex2oat
 PRODUCT_VENDOR_PROPERTIES += \
-pm.dexopt.boot=verify \
-pm.dexopt.first-boot=verify \
-pm.dexopt.install=speed-profile \
+dalvik.vm.dex2oat-filter=speed \
+dalvik.vm.dex2oat-threads=8 \
 dalvik.vm.image-dex2oat-filter=speed \
 dalvik.vm.image-dex2oat-threads=8 \
-dalvik.vm.dex2oat-filter=speed \
-dalvik.vm.dex2oat-threads=8
+pm.dexopt.bg-dexopt=everything \
+pm.dexopt.boot=verify \
+pm.dexopt.first-boot=quicken \
+pm.dexopt.install=speed-profile
 
 # Dirac
 PRODUCT_VENDOR_PROPERTIES += \
