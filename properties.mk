@@ -161,6 +161,7 @@ vendor.qcom.bluetooth.soc=cherokee
 
 PRODUCT_SYSTEM_PROPERTIES += \
 persist.vendor.btstack.enable.twsplus=true \
+persist.vendor.btstack.enable.twsplussho=true
 persist.vendor.bt.a2dp.hal.implementation=true
 
 # Blur
