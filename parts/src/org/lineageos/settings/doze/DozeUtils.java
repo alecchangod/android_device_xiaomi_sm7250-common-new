@@ -27,6 +27,7 @@ import android.os.PowerManager;
 import android.os.SystemClock;
 import android.os.UserHandle;
 import android.provider.Settings;
+import android.provider.Settings.SettingNotFoundException;
 import android.util.Log;
 import androidx.preference.PreferenceManager;
 
@@ -46,10 +47,15 @@ public final class DozeUtils {
     protected static final String WAKE_ON_GESTURE_KEY = "wake_on_gesture";
     protected static final String CATEG_PICKUP_SENSOR = "pickup_sensor";
     protected static final String CATEG_PROX_SENSOR = "proximity_sensor";
+    protected static final String SCREEN_OFF_UDFPS_ENABLED = "screen_off_udfps_enabled";
 
     protected static final String GESTURE_PICK_UP_KEY = "gesture_pick_up";
     protected static final String GESTURE_HAND_WAVE_KEY = "gesture_hand_wave";
     protected static final String GESTURE_POCKET_KEY = "gesture_pocket";
+
+    public static void onBootCompleted(Context context) {
+        enableScreenOffUdfpsByDefault(context);
+    }
 
     public static void startService(Context context) {
         if (DEBUG) Log.d(TAG, "Starting service");
@@ -79,6 +85,17 @@ public final class DozeUtils {
             return con.getResources().getBoolean(id);
         } catch (PackageManager.NameNotFoundException e) {
             return false;
+        }
+    }
+
+    private static void enableScreenOffUdfpsByDefault(Context context) {
+        try {
+            Settings.Secure.getIntForUser(context.getContentResolver(), SCREEN_OFF_UDFPS_ENABLED,
+                UserHandle.USER_CURRENT);
+        } catch (SettingNotFoundException e) {
+            Log.i(TAG, "Setting screen_off_udfps_enabled to 1 by default.");
+            Settings.Secure.putIntForUser(context.getContentResolver(), SCREEN_OFF_UDFPS_ENABLED,
+                1, UserHandle.USER_CURRENT);
         }
     }
 
