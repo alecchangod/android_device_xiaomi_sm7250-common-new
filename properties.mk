@@ -193,6 +193,9 @@ persist.vendor.ims.disableDebugLogs=1 \
 persist.vendor.ims.disableSigHandler=1 \
 persist.vendor.ims.disableQXDMLogs=1
 
+# Disable Skia tracing by default
+PRODUCT_SYSTEM_PROPERTIES += \
+debug.hwui.skia_atrace_enabled=false
 
 # Display
 PRODUCT_VENDOR_PROPERTIES += \
