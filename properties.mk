@@ -129,6 +129,7 @@ tunnel.audio.encode=true
 
 # Bluetooth
 PRODUCT_VENDOR_PROPERTIES += \
+bluetooth.hardware.power.operating_voltage_mv=3300 \
 persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac \
 persist.bluetooth.a2dp_offload.disabled=false \
 persist.sys.fflag.override.settings_bluetooth_hearing_aid=true \
