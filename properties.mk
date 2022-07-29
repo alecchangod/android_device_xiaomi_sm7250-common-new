@@ -368,6 +368,7 @@ ro.hardware.keystore_desede=true
 
 # LMKD
 PRODUCT_PRODUCT_PROPERTIES += \
+ro.config.low_ram=false \
 ro.lmk.low=1001 \
 ro.lmk.medium=800 \
 ro.lmk.critical=0 \
