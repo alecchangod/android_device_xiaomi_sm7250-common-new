@@ -468,6 +468,12 @@ renderthread.skia.reduceopstasksplitting=true
 PRODUCT_VENDOR_PROPERTIES += \
 sys.vendor.shutdown.waittime=500
 
+# Suspend properties
+PRODUCT_VENDOR_PROPERTIES += \
+suspend.max_sleep_time_millis=40000 \
+suspend.short_suspend_backoff_enabled=true \
+suspend.short_suspend_threshold_millis=2000
+
 # USB
 PRODUCT_VENDOR_PROPERTIES += \
 vendor.usb.diag.func.name=diag \
