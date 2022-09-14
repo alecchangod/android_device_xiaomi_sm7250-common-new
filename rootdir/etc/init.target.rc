@@ -147,7 +147,13 @@ on boot
     setprop persist.vendor.qg_coff_gain 1
     setprop persist.vendor.qg_cld_coff_gain 1.5
 
-    #USB controller configuration
+    # Setup runtime blkio
+    write /dev/blkio/blkio.weight 1000
+    write /dev/blkio/background/blkio.weight 200
+    write /dev/blkio/blkio.group_idle 2000
+    write /dev/blkio/background/blkio.group_idle 0
+
+    # USB controller configuration
     setprop vendor.usb.rndis.func.name "gsi"
     setprop vendor.usb.rmnet.func.name "gsi"
     setprop vendor.usb.rmnet.inst.name "rmnet"
