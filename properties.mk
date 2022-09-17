@@ -133,7 +133,6 @@ bluetooth.device.class_of_device=90,2,12 \
 bluetooth.hardware.power.operating_voltage_mv=3300 \
 persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac \
 persist.bluetooth.a2dp_offload.disabled=false \
-persist.sys.fflag.override.settings_bluetooth_hearing_aid=true \
 persist.vendor.bt.aac_frm_ctl.enabled=true \
 persist.vendor.bt.aac_vbr_frm_ctl.enabled=true \
 persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptiver2 \
