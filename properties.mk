@@ -150,7 +150,8 @@ vendor.qcom.bluetooth.soc=cherokee
 
 # Camera
 PRODUCT_SYSTEM_PROPERTIES += \
-camera.disable_zsl_mode=true
+camera.disable_zsl_mode=true \
+persist.vendor.camera.perflock.enable=0
 
 # Chipset
 PRODUCT_VENDOR_PROPERTIES += \
