@@ -470,6 +470,11 @@ persist.rcs.otp_sms_port=0
 PRODUCT_VENDOR_PROPERTIES += \
 persist.vendor.radio.add_power_save=0
 
+# Radio Video Calling
+PRODUCT_SYSTEM_PROPERTIES += \
+persist.vendor.radio.vdp_on_ims_cap=1 \
+persist.vendor.qti.telephony.vt_cam_interface=2
+
 # Radio VoNR Calling
 PRODUCT_SYSTEM_PROPERTIES += \
 persist.radio.is_vonr_enabled_0=true \
