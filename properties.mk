@@ -148,6 +148,13 @@ ro.bluetooth.a2dp_offload.supported=true \
 ro.vendor.bluetooth.wipower=false \
 vendor.qcom.bluetooth.soc=cherokee
 
+# Blur
+PRODUCT_SYSTEM_PROPERTIES += \
+ro.surface_flinger.supports_background_blur=1 \
+ro.sf.blurs_are_expensive=1 \
+persist.sys.sf.disable_blurs=1 \
+persist.sysui.disableBlur=1
+
 # Camera
 PRODUCT_SYSTEM_PROPERTIES += \
 camera.disable_zsl_mode=true \
@@ -163,7 +170,14 @@ PRODUCT_VENDOR_PROPERTIES += \
 ro.crypto.allow_encrypt_override=true \
 ro.crypto.volume.filenames_mode=aes-256-cts
 
+# CNE
+PRODUCT_SYSTEM_PROPERTIES += \
+persist.vendor.cne.feature=1
+
 # Dalvik
+PRODUCT_SYSTEM_PROPERTIES += \
+dalvik.vm.dex2oat64.enabled=true
+
 PRODUCT_VENDOR_PROPERTIES += \
 dalvik.vm.heapgrowthlimit=256m \
 dalvik.vm.heapmaxfree=8m \
@@ -235,14 +249,6 @@ debug.sf.enable_transaction_tracing=false \
 debug.sf.latch_unsignaled=1 \
 debug.sf.predict_hwc_composition_strategy=0 \
 persist.vendor.color.matrix=2
-
-# CNE
-PRODUCT_SYSTEM_PROPERTIES += \
-persist.vendor.cne.feature=1
-
-# Dalvik
-PRODUCT_SYSTEM_PROPERTIES += \
-dalvik.vm.dex2oat64.enabled=true
 
 # DPM
 PRODUCT_SYSTEM_PROPERTIES += \
