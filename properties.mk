@@ -275,11 +275,12 @@ debug.hwui.target_cpu_time_percent=20 \
 debug.hwui.use_hint_manager=true \
 debug.sf.disable_client_composition_cache=1 \
 debug.sf.enable_egl_image_tracker=0 \
-debug.sf.enable_hwc_vds=1 \
+debug.sf.enable_hwc_vds=0 \
 debug.sf.enable_transaction_tracing=false \
 debug.sf.latch_unsignaled=0 \
 debug.sf.predict_hwc_composition_strategy=0 \
 debug.sf.treat_170m_as_sRGB=1 \
+media.wfd.max_resolution=8 \
 persist.vendor.color.matrix=2
 
 # Display Refresh Rate
