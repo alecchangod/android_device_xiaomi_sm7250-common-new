@@ -127,7 +127,8 @@ vendor.audio.offload.buffer.size.kb=256 \
 vendor.audio.offload.gapless.enabled=true \
 persist.audio.button_jack.profile=volume \
 persist.audio.button_jack.switch=0 \
-persist.vendor.audio.fluence.speaker=true
+persist.vendor.audio.fluence.speaker=true \
+ro.audio.monitorRotation=true
 
 # Bluetooth
 PRODUCT_VENDOR_PROPERTIES += \
