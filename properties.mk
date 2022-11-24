@@ -174,6 +174,9 @@ dalvik.vm.heaptargetutilization=0.75
 
 # Display
 PRODUCT_VENDOR_PROPERTIES += \
+persist.sys.sf.color_mode=9 \
+persist.sys.sf.color_saturation=1.0 \
+persist.sys.sf.native_mode=2 \
 ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
 ro.surface_flinger.max_virtual_display_dimension=4096 \
@@ -251,9 +254,6 @@ debug.sf.high_fps_late_sf_phase_offset_ns=-4000000 \
 debug.sf.hw=0 \
 debug.sf.latch_unsignaled=1 \
 persist.demo.hdmirotationlock=false \
-persist.sys.sf.color_mode=9 \
-persist.sys.sf.color_saturation=1.0 \
-persist.sys.sf.native_mode=2 \
 ro.hardware.egl=adreno \
 ro.hardware.vulkan=adreno \
 ro.opengles.version=196610 \
