@@ -279,6 +279,7 @@ debug.sf.enable_hwc_vds=1 \
 debug.sf.enable_transaction_tracing=false \
 debug.sf.latch_unsignaled=0 \
 debug.sf.predict_hwc_composition_strategy=0 \
+debug.sf.treat_170m_as_sRGB=1 \
 persist.vendor.color.matrix=2
 
 # Display Refresh Rate
