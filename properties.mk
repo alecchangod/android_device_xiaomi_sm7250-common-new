@@ -193,6 +193,10 @@ persist.vendor.ims.disableDebugLogs=1 \
 persist.vendor.ims.disableSigHandler=1 \
 persist.vendor.ims.disableQXDMLogs=1
 
+# Disable MTE Async for system server
+PRODUCT_SYSTEM_PROPERTIES += \
+arm64.memtag.process.system_server=off
+
 # Disable Skia tracing by default
 PRODUCT_SYSTEM_PROPERTIES += \
 debug.hwui.skia_atrace_enabled=false
