@@ -333,6 +333,7 @@ persist.backup.ntpServer=0.pool.ntp.org
 PRODUCT_VENDOR_PROPERTIES += \
 debug.egl.hw=0 \
 debug.mdpcomp.logs=0 \
+debug.sf.auto_latch_unsignaled=0 \
 debug.sf.early.sf.duration=16000000 \
 debug.sf.early.app.duration=16500000 \
 debug.sf.earlyGl.sf.duration=13500000 \
