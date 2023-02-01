@@ -225,10 +225,11 @@ vendor.display.use_smooth_motion=0
 PRODUCT_SYSTEM_PROPERTIES += \
 debug.cpurend.vsync=false \
 debug.gralloc.gfx_ubwc_disable=0 \
+debug.sf.disable_client_composition_cache=1 \
 debug.sf.enable_hwc_vds=1 \
 debug.sf.enable_transaction_tracing=false \
 debug.sf.latch_unsignaled=1 \
-debug.sf.disable_client_composition_cache=1 \
+debug.sf.predict_hwc_composition_strategy=0 \
 persist.vendor.color.matrix=2
 
 # CNE
