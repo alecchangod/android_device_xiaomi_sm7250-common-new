@@ -271,6 +271,7 @@ debug.gralloc.gfx_ubwc_disable=0 \
 debug.hwui.target_cpu_time_percent=20 \
 debug.hwui.use_hint_manager=true \
 debug.sf.disable_client_composition_cache=1 \
+debug.sf.enable_egl_image_tracker=0 \
 debug.sf.enable_hwc_vds=1 \
 debug.sf.enable_transaction_tracing=false \
 debug.sf.latch_unsignaled=1 \
