@@ -66,8 +66,9 @@ public class AutoHBMService extends Service {
         return FileUtils.getFileValueAsBoolean(HBM, false);
     }
 
-    private SensorEventListener mSensorEventListener = new SensorEventListener() {
+    private static final int DELAY_MILLIS = 7000; // 7 seconds
 
+    private SensorEventListener mSensorEventListener = new SensorEventListener() {
         @Override
         public void onSensorChanged(SensorEvent event) {
             float lux = event.values[0];
@@ -75,7 +76,6 @@ public class AutoHBMService extends Service {
                 (KeyguardManager) getSystemService(getApplicationContext().KEYGUARD_SERVICE);
             boolean keyguardShowing = km.inKeyguardRestrictedInputMode();
             float luxThreshold = Float.parseFloat(mSharedPrefs.getString(HBMFragment.KEY_AUTO_HBM_THRESHOLD, "20000"));
-            long timeToDisableHBM = Long.parseLong(mSharedPrefs.getString(HBMFragment.KEY_HBM_DISABLE_TIME, "1"));
 
             if (lux > luxThreshold) {
                 if ((!mAutoHBMActive || !isCurrentlyEnabled()) && !keyguardShowing && !dcDimmingEnabled) {
@@ -85,13 +85,13 @@ public class AutoHBMService extends Service {
             }
             if (lux < luxThreshold) {
                 if (mAutoHBMActive) {
+                    mAutoHBMActive = false;
                     mExecutorService.submit(() -> {
                         try {
-                            Thread.sleep(timeToDisableHBM * 1000);
+                            Thread.sleep(DELAY_MILLIS);
                         } catch (InterruptedException e) {
                         }
-                        if (lux < luxThreshold) {
-                            mAutoHBMActive = false;
+                        if (lux < threshold) {
                             enableHBM(false);
                         }
                     });
