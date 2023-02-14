@@ -183,7 +183,8 @@ persist.vendor.cne.feature=1
 
 # Dalvik
 PRODUCT_SYSTEM_PROPERTIES += \
-dalvik.vm.dex2oat64.enabled=true
+dalvik.vm.dex2oat64.enabled=true \
+ro.sys.fw.dex2oat_thread_count=8
 
 PRODUCT_VENDOR_PROPERTIES += \
 dalvik.vm.heapgrowthlimit=256m \
