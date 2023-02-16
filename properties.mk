@@ -343,7 +343,8 @@ vendor.power.pasr.enabled=false
 
 # Perf
 PRODUCT_VENDOR_PROPERTIES += \
-ro.vendor.extension_library=libqti-perfd-client.so
+ro.vendor.extension_library=libqti-perfd-client.so \
+ro.vendor.perf.scroll_opt=true
 
 PRODUCT_SYSTEM_PROPERTIES += \
 ro.vendor.qti.core_ctl_max_cpu=4 \
