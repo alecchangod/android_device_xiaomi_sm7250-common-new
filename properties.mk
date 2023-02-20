@@ -1,3 +1,9 @@
+# Adaptive Suspend
+PRODUCT_SYSTEM_PROPERTIES += \
+suspend.max_sleep_time_millis=40000 \
+suspend.short_suspend_backoff_enabled=true \
+suspend.short_suspend_threshold_millis=2000
+
 # Audio
 PRODUCT_VENDOR_PROPERTIES += \
 aaudio.hw_burst_min_usec=2000 \
