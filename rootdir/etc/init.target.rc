@@ -129,25 +129,30 @@ on boot
     chown system system /sys/class/drm/card0-DSI-1/disp_count
     chmod 0664 /sys/class/drm/card0-DSI-1/disp_count
     chown system system /sys/class/thermal/thermal_message/sconfig
-#palm_sensor
+    #palm_sensor
     chown system system /sys/class/touch/touch_dev/palm_sensor
 
-#Set the default voltage to 5v
+    #Set the default voltage to 5v
     setprop persist.vendor.cp.taper_term_mv 5000
 
     setprop persist.vendor.qg_cold_temp -150
     setprop persist.vendor.qg_coff_gain 1
     setprop persist.vendor.qg_cld_coff_gain 1.5
 
-#USB controller configuration
+    #USB controller configuration
     setprop vendor.usb.rndis.func.name "gsi"
     setprop vendor.usb.rmnet.func.name "gsi"
     setprop vendor.usb.rmnet.inst.name "rmnet"
     setprop vendor.usb.dpl.inst.name "dpl"
     setprop vendor.usb.qdss.inst.name "qdss_mdm"
     setprop vendor.usb.controller a600000.dwc3
-#change owner of tp fsnode
+    #change owner of tp fsnode
     chown system system /proc/tp_selftest
+
+    # Health
+    chmod 0660 /sys/class/power_supply/battery/input_suspend
+    chown system system /sys/class/power_supply/battery/input_suspend
+
 
 on property:vendor.display.lcd_density=560
    setprop dalvik.vm.heapgrowthlimit 256m
