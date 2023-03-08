@@ -464,6 +464,11 @@ ro.telephony.iwlan_operation_mode=default
 PRODUCT_PRODUCT_PROPERTIES += \
 persist.rcs.otp_sms_port=0
 
+# Radio VoNR Calling
+PRODUCT_SYSTEM_PROPERTIES += \
+persist.radio.is_vonr_enabled_0=true \
+persist.radio.is_vonr_enabled_1=true
+
 # RIL Powersaving
 PRODUCT_SYSTEM_PROPERTIES += \
 persist.radio.add_power_save=1 \
