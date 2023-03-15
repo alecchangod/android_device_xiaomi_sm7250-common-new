@@ -155,7 +155,7 @@ ro.charger.disable_init_blank=true
 
 # Chipset
 PRODUCT_VENDOR_PROPERTIES += \
-ro.soc.manufacturer=Qualcomm \
+ro.soc.manufacturer=QTI \
 ro.soc.model=SM7250
 
 # Crypto
