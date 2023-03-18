@@ -360,6 +360,18 @@ ro.telephony.iwlan_operation_mode=default
 PRODUCT_PRODUCT_PROPERTIES += \
 persist.rcs.otp_sms_port=0
 
+# RIL Powersaving
+PRODUCT_SYSTEM_PROPERTIES += \
+persist.radio.add_power_save=1 \
+pm.sleep_mode=1 \
+ro.ril.disable.power.collapse=0 \
+ro.ril.fast.dormancy.rule=1 \
+ro.ril.fast.dormancy.timeout=3 \
+ro.mot.eri.losalert.delay=100 \
+ro.vendor.use_data_netmgrd=true \
+ro.vold.umsdirtyratio=20 \
+power.saving.mode=1
+
 # Seamless transfer
 PRODUCT_VENDOR_PROPERTIES += \
 sys.fflag.override.settings_seamless_transfer=true
