@@ -266,11 +266,6 @@ persist.dbg.volte_avail_ovr=1 \
 persist.dbg.vt_avail_ovr=1 \
 persist.dbg.wfc_avail_ovr=1
 
-# IOP
-PRODUCT_SYSTEM_PROPERTIES += \
-vendor.iop.enable_prefetch_ofr=1 \
-vendor.iop.enable_uxe=0
-
 # Keystore
 PRODUCT_VENDOR_PROPERTIES += \
 ro.hardware.keystore_desede=true
