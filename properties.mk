@@ -233,6 +233,9 @@ persist.vendor.qfp=false
 PRODUCT_VENDOR_PROPERTIES += \
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
+# FS-verity
+ro.apk_verity.mode=2
+
 # FUSE passthrough
 PRODUCT_VENDOR_PROPERTIES += \
 persist.sys.fuse.passthrough.enable=true
