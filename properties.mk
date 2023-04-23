@@ -297,6 +297,10 @@ persist.vendor.dpm.feature=1
 PRODUCT_VENDOR_PROPERTIES += \
 drm.service.enabled=true
 
+# Feature flags
+PRODUCT_SYSTEM_PROPERTIES += \
+persist.sys.fflag.override.settings_enable_monitor_phantom_procs=false
+
 # Fingerprint
 PRODUCT_VENDOR_PROPERTIES += \
 persist.vendor.qfp=false
