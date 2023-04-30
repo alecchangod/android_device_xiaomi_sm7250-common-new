@@ -272,7 +272,7 @@ debug.sf.disable_client_composition_cache=1 \
 debug.sf.enable_egl_image_tracker=0 \
 debug.sf.enable_hwc_vds=1 \
 debug.sf.enable_transaction_tracing=false \
-debug.sf.latch_unsignaled=1 \
+debug.sf.latch_unsignaled=0 \
 debug.sf.predict_hwc_composition_strategy=0 \
 persist.vendor.color.matrix=2
 
@@ -340,7 +340,7 @@ debug.sf.high_fps_early_phase_offset_ns=-4000000 \
 debug.sf.high_fps_late_app_phase_offset_ns=1000000 \
 debug.sf.high_fps_late_sf_phase_offset_ns=-4000000 \
 debug.sf.hw=0 \
-debug.sf.latch_unsignaled=1 \
+debug.sf.latch_unsignaled=0 \
 ro.hardware.egl=adreno \
 ro.hardware.vulkan=adreno \
 ro.opengles.version=196610 \
