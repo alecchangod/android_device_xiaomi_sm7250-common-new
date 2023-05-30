@@ -1,3 +1,7 @@
+
+# Aware
+get_prop(system_app, vendor_aware_available_prop)
+
 allow system_app vendor_sysfs_battery_supply:dir { search };
 allow system_app vendor_sysfs_battery_supply:file { read };
 allow system_app vendor_sysfs_battery_supply:file { open };
