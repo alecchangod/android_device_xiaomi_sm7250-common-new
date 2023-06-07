@@ -259,6 +259,11 @@ ro.hardware.vulkan=adreno \
 ro.opengles.version=196610 \
 vendor.gralloc.disable_ubwc=0
 
+# HVDCP
+PRODUCT_VENDOR_PROPERTIES += \
+persist.vendor.pps.disallowed=1 \
+persist.vendor.hvdcp_opti.disallowed=1
+
 # IMS
 PRODUCT_SYSTEM_PROPERTIES += \
 persist.dbg.volte_avail_ovr=1 \
