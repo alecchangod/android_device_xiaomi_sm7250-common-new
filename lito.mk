@@ -98,6 +98,8 @@ PRODUCT_PACKAGES += \
     libexthwplugin \
     libhdmiedid \
     libhfp \
+    libldacBT_abr \
+    libldacBT_enc \
     libldnhncr \
     libqcompostprocbundle \
     libqcomvisualizer \
