@@ -323,6 +323,10 @@ ro.vendor.qti.va_odm.support=1
 PRODUCT_VENDOR_PROPERTIES += \
 vendor.gatekeeper.disable_spu=true
 
+# GFX
+PRODUCT_VENDOR_PROPERTIES += \
+ro.config.avoid_gfx_accel=true
+
 # GPS
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
 persist.backup.ntpServer=0.pool.ntp.org
