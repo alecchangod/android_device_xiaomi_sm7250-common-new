@@ -306,6 +306,23 @@ persist.dbg.wfc_avail_ovr=1
 PRODUCT_VENDOR_PROPERTIES += \
 ro.hardware.keystore_desede=true
 
+# LMKD
+PRODUCT_PRODUCT_PROPERTIES += \
+ro.lmk.low=1001 \
+ro.lmk.medium=800 \
+ro.lmk.critical=0 \
+ro.lmk.critical_upgrade=false \
+ro.lmk.upgrade_pressure=100 \
+ro.lmk.downgrade_pressure=100 \
+ro.lmk.kill_heaviest_task=true \
+ro.lmk.kill_timeout_ms=100 \
+ro.lmk.use_psi=true \
+ro.lmk.psi_partial_stall_ms=90 \
+ro.lmk.psi_complete_stall_ms=700 \
+ro.lmk.thrashing_limit=70 \
+ro.lmk.thrashing_limit_decay=20 \
+ro.lmk.swap_util_max=100
+
 # Media
 PRODUCT_VENDOR_PROPERTIES += \
 debug.stagefright.ccodec=1 \
