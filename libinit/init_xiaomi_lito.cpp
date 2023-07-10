@@ -12,4 +12,7 @@
 void vendor_load_properties() {
     set_dalvik_heap();
     set_lmk();
+
+    // SafetyNet workaround
+    property_override("ro.boot.verifiedbootstate", "green");
 }
