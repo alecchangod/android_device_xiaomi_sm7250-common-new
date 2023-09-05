@@ -393,11 +393,16 @@ on post-fs-data
     #Create dir for dolby
     mkdir /data/vendor/dolby 0770 media media
 
+    # Thermal Configs
+    chmod 0664 /sys/devices/virtual/thermal/thermal_message/sconfig
+    chown system system /sys/devices/virtual/thermal/thermal_message/sconfig
+
     # Cleanup dropbox on boot
     rm /data/system/dropbox
 
     # keep that at the end of on post-fs-data
     # Set indication (checked by vold) that we have finished this action
+
     setprop vold.post_fs_data_done 1
 
 service qti_esepowermanager_service_1_1 /vendor/bin/hw/vendor.qti.esepowermanager@1.1-service
