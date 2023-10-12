@@ -343,7 +343,8 @@ rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so \
 ro.com.android.dataroaming=false
 
 PRODUCT_SYSTEM_PROPERTIES += \
-ro.telephony.default_network=33,33
+ro.telephony.default_network=33,33 \
+ro.telephony.iwlan_operation_mode=default
 
 # Seamless transfer
 PRODUCT_VENDOR_PROPERTIES += \
