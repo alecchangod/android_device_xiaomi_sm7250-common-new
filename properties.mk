@@ -366,6 +366,7 @@ sys.fflag.override.settings_seamless_transfer=true
 # Sensors
 PRODUCT_VENDOR_PROPERTIES += \
 persist.vendor.sensors.allow_non_default_discovery=true \
+persist.vendor.sensors.debug.hal=0 \
 persist.vendor.sensors.sync_request=true
 
 # Shutdown
