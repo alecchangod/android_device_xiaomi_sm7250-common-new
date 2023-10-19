@@ -107,6 +107,11 @@ on early-boot
     write /sys/bus/msm_subsys/devices/subsys4/restart_level RELATED
     write /sys/bus/msm_subsys/devices/subsys5/restart_level RELATED
     write /sys/bus/msm_subsys/devices/subsys6/restart_level RELATED
+    write /sys/bus/msm_subsys/devices/subsys7/restart_level RELATED
+    write /sys/bus/msm_subsys/devices/subsys8/restart_level RELATED
+    write /sys/bus/msm_subsys/devices/subsys9/restart_level RELATED
+    write /sys/bus/msm_subsys/devices/subsys10/restart_level RELATED
+    write /sys/bus/msm_subsys/devices/subsys11/restart_level RELATED
 
 on boot
     enable qti_esepowermanager_service_1_1
