@@ -330,6 +330,10 @@ PRODUCT_COPY_FILES += \
 # Properties
 -include $(LOCAL_PATH)/properties.mk
 
+# Protobuf - Workaround for prebuilt Qualcomm HAL
+PRODUCT_PACKAGES += \
+    libprotobuf-cpp-full-3.9.1-vendorcompat
+
 # QMI
 PRODUCT_PACKAGES += \
     libjson \
