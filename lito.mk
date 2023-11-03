@@ -248,6 +248,10 @@ PRODUCT_PACKAGES += \
     libipanat \
     liboffloadhal
 
+# Input
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/keylayout/lito-mtp-snd-card_Button_Jack.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/lito-mtp-snd-card_Button_Jack.kl
+
 # Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@4.1.vendor
