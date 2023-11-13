@@ -151,10 +151,6 @@ vendor.qcom.bluetooth.soc=cherokee
 PRODUCT_SYSTEM_PROPERTIES += \
 camera.disable_zsl_mode=true
 
-# Charger
-PRODUCT_SYSTEM_PROPERTIES += \
-ro.charger.disable_init_blank=true
-
 # Chipset
 PRODUCT_VENDOR_PROPERTIES += \
 ro.soc.manufacturer=QTI \
