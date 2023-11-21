@@ -176,6 +176,21 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.audio.misound.disable=false \
     ro.vendor.audio.misound.bluetooth.enable=true
 
+# Disable Log spams
+PRODUCT_VENDOR_PROPERTIES += \
+persist.log.tag.AnalyticsService=S \
+persist.log.tag.KernelCpuUidActiveTimeReader=S \
+persist.log.tag.Tracer=S \
+persist.log.tag.NearbySharing=S \
+persist.log.tag.IntervalStats=S \
+persist.log.tag.CompatibilityChangeReporter=S \
+persist.log.tag.SQLiteLog=S \
+persist.log.tag.wificond=S \
+persist.log.tag.b/223498680=S \
+persist.log.tag.TrafficStats=S \
+persist.log.tag.ContrastColorUtil=S \
+persist.log.tag.OpenGLRenderer=S
+
 # Display
 PRODUCT_VENDOR_PROPERTIES += \
 persist.sys.sf.color_mode=9 \
