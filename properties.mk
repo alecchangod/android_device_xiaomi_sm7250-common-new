@@ -254,6 +254,7 @@ debug.sf.latch_unsignaled=1 \
 ro.hardware.egl=adreno \
 ro.hardware.vulkan=adreno \
 ro.opengles.version=196610 \
+ro.vendor.perf.scroll_opt=true \
 vendor.gralloc.disable_ubwc=0
 
 # HVDCP
