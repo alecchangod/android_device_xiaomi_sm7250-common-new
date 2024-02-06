@@ -160,8 +160,7 @@ ro.soc.model=SM7250
 
 # Crypto
 PRODUCT_VENDOR_PROPERTIES += \
-ro.crypto.allow_encrypt_override=true \
-ro.crypto.volume.filenames_mode=aes-256-cts
+ro.crypto.allow_encrypt_override=true
 
 # Dalvik
 PRODUCT_VENDOR_PROPERTIES += \
@@ -240,6 +239,13 @@ persist.vendor.dpm.feature=1
 # DRM
 PRODUCT_VENDOR_PROPERTIES += \
 drm.service.enabled=true
+
+# Encryption
+PRODUCT_VENDOR_PROPERTIES += \
+ro.crypto.dm_default_key.options_format.version=2 \
+ro.crypto.volume.metadata.method=dm-default-key \
+ro.crypto.volume.filenames_mode=aes-256-cts \
+ro.crypto.volume.options=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized
 
 # Fingerprint
 PRODUCT_VENDOR_PROPERTIES += \
