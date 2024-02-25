@@ -149,8 +149,6 @@ on boot
     setprop vendor.usb.controller a600000.dwc3
 #change owner of tp fsnode
     chown system system /proc/tp_selftest
-#Load WLAN driver
-    insmod /vendor/lib/modules/qca_cld3_wlan.ko
 
 on property:vendor.display.lcd_density=560
    setprop dalvik.vm.heapgrowthlimit 256m
