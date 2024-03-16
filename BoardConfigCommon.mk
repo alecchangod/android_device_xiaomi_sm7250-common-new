@@ -7,6 +7,7 @@
 COMMON_PATH := device/xiaomi/sm7250-common
 
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+SKIP_ABI_CHECKS := true
 
 # Architecture
 TARGET_ARCH := arm64
