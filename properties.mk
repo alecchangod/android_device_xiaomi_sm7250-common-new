@@ -6,11 +6,8 @@ aaudio.mmap_policy=1 \
 audio.deep_buffer.media=true \
 audio.offload.buffer.size.kb=32 \
 audio.offload.gapless.enabled=true \
-persist.audio.button_jack.profile=volume \
-persist.audio.button_jack.switch=0 \
-persist.audio.fluence.speaker=true \
-persist.audio.fluence.voicecall=true \
-persist.audio.fluence.voicerec=false \
+persist.vendor.audio.fluence.voicecall=true \
+persist.vendor.audio.fluence.voicerec=false \
 persist.vendor.audio.ambisonic.auto.profile=false \
 persist.vendor.audio.ambisonic.capture=false \
 persist.vendor.audio.apptype.multirec.enabled=false \
@@ -66,8 +63,6 @@ vendor.audio.feature.usb_offload_burst_mode.enable=true \
 vendor.audio.feature.usb_offload_sidetone_volume.enable=false \
 vendor.audio.feature.vbat.enable=true \
 vendor.audio.feature.wsa.enable=false \
-ro.qc.sdk.audio.fluencetype=none \
-ro.qc.sdk.audio.ssr=false \
 ro.vendor.audio.game.effect=true \
 ro.vendor.audio.hifi=false \
 ro.vendor.audio.ring.filter=true \
@@ -95,7 +90,6 @@ ro.vendor.audio.soundtrigger.xatx.vop.level=10 \
 ro.vendor.audio.us.proximity=true \
 ro.vendor.audio.voice.change.support=true \
 ro.vendor.audio.voice.volume.boost=manual \
-tunnel.audio.encode=true \
 vendor.audio.adm.buffering.ms=6 \
 vendor.audio.dolby.ds2.enabled=false \
 vendor.audio.dolby.ds2.hardbypass=false \
@@ -104,8 +98,6 @@ vendor.audio.flac.sw.decoder.24bit=true \
 vendor.audio.hal.output.suspend.supported=false \
 vendor.audio.hw.aac.encoder=true \
 vendor.audio.mic.status=off \
-vendor.audio.offload.buffer.size.kb=32 \
-vendor.audio.offload.gapless.enabled=true \
 vendor.audio.offload.multiaac.enable=true \
 vendor.audio.offload.multiple.enabled=false \
 vendor.audio.offload.passthrough=false \
@@ -126,7 +118,16 @@ vendor.voice.path.for.pcm.voip=true
 PRODUCT_SYSTEM_PROPERTIES += \
 persist.audio.button_jack.profile=volume \
 persist.audio.button_jack.switch=0 \
+ro.qc.sdk.audio.fluencetype=none \
+ro.qc.sdk.audio.ssr=false \
 tunnel.audio.encode=true
+
+PRODUCT_ODM_PROPERTIES += \
+vendor.audio.offload.buffer.size.kb=32 \
+vendor.audio.offload.gapless.enabled=true \
+persist.audio.button_jack.profile=volume \
+persist.audio.button_jack.switch=0 \
+persist.vendor.audio.fluence.speaker=true
 
 # Bluetooth
 PRODUCT_VENDOR_PROPERTIES += \
@@ -239,7 +240,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 vendor.gatekeeper.disable_spu=true
 
 # GPS
-PRODUCT_VENDOR_PROPERTIES += \
+PRODUCT_SYSTEM_EXT_PROPERTIES += \
 persist.backup.ntpServer=0.pool.ntp.org
 
 # Graphics
@@ -254,7 +255,6 @@ debug.sf.high_fps_late_app_phase_offset_ns=1000000 \
 debug.sf.high_fps_late_sf_phase_offset_ns=-4000000 \
 debug.sf.hw=0 \
 debug.sf.latch_unsignaled=1 \
-persist.demo.hdmirotationlock=false \
 ro.hardware.egl=adreno \
 ro.hardware.vulkan=adreno \
 ro.opengles.version=196610 \
@@ -319,9 +319,6 @@ persist.vendor.qcomsysd.enabled=1
 # Radio
 PRODUCT_VENDOR_PROPERTIES += \
 persist.radio.multisim.config=dsds \
-persist.radio.snapshot_enabled=0 \
-persist.radio.snapshot_timer=0 \
-persist.rcs.otp_sms_port=0 \
 persist.rcs.supported=1 \
 persist.vendor.data.iwlan.enable=true \
 persist.vendor.radio.apm_sim_not_pwdn=1 \
@@ -339,12 +336,17 @@ persist.vendor.radio.process_sups_ind=1 \
 persist.vendor.radio.rat_on=combine \
 persist.vendor.radio.sib16_support=1 \
 persist.vendor.radio.uicc_se_enabled=true \
-rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so \
+vendor.rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so \
 ro.com.android.dataroaming=false
 
 PRODUCT_SYSTEM_PROPERTIES += \
+persist.radio.snapshot_enabled=0 \
+persist.radio.snapshot_timer=0 \
 ro.telephony.default_network=33,33 \
 ro.telephony.iwlan_operation_mode=default
+
+PRODUCT_PRODUCT_PROPERTIES += \
+persist.rcs.otp_sms_port=0
 
 # Seamless transfer
 PRODUCT_VENDOR_PROPERTIES += \
