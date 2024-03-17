@@ -1,1 +1,2 @@
+allow untrusted_app_32 zygote:unix_stream_socket { getopt };
 allow untrusted_app zygote:unix_stream_socket { getopt };
