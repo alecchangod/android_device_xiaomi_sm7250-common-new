@@ -15,6 +15,14 @@
             <instance>slot2</instance>
         </interface>
     </hal>
+   <hal format="hidl" optional="true">
+       <name>android.hardware.usb</name>
+       <version>1.0-3</version>
+       <interface>
+         <name>IUsb</name>
+         <instance>default</instance>
+       </interface>
+   </hal>
     <hal format="hidl" optional="true">
         <name>com.qualcomm.qti.dpm.api</name>
         <version>1.0</version>
