@@ -225,9 +225,12 @@ vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy
 vendor/lib/vendor.qti.hardware.dsp@1.0.so
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so
 
-# Embedded Secure Element power manager
-vendor/lib/vendor.qti.esepowermanager@1.0.so
-vendor/lib64/vendor.qti.esepowermanager@1.0.so
+# Embedded Secure Element power manager - from munch miui_MUNCHGlobal_V14.0.4.0.TLMMIXM_d6c833c659_13.0
+vendor/bin/hw/vendor.qti.esepowermanager@1.1-service|35676a23f81fe20a5bda8e2bf0e53287089b779b0b7b8ff230babe47ef19127e
+vendor/etc/init/vendor.qti.esepowermanager@1.1-service.rc|cc0c23bf86c480eff39563e7c4733fe1e0848d68f284e6975947823be873bb74
+vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so|44a4f0fb537ab28283cdd8e6e5c0ac66ca19572bf13ae97b7cbbb7b1e9400063
+vendor/lib64/vendor.qti.esepowermanager@1.0.so|773dcebcdceaaa26f9eff2fcd5189fe8177cf5bb507f547982a2a00ceeae5c7d
+vendor/lib64/vendor.qti.esepowermanager@1.1.so|b1332df9a5639312b01ed7ce2a970a4e7f24edcad9828b72e19ab0bf414b8e1e
 
 # Feature enabler client
 vendor/bin/feature_enabler_client
