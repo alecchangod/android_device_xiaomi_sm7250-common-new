@@ -255,13 +255,6 @@ service tcpdump_full /vendor/bin/tcpdump -i any -W 3 -C 40 -w /data/vendor/wlan_
     disabled
     oneshot
 
-on property:sys.user.0.ce_available=true
-    start cnss_diag
-    start tcpdump
-
-on property:vold.decrypt=trigger_restart_framework
-    start cnss_diag
-
 service nv_mac /vendor/bin/nv_mac
     class late_start
     user system
