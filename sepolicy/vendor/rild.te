@@ -1,3 +1,9 @@
 allow rild gsi_metadata_file:dir search;
 allow rild metadata_file:dir search;
+
+# IMEI
 set_prop(rild, deviceid_prop)
+set_prop(rild, vendor_deviceid_prop)
+
+# Serial number
+set_prop(rild, vendor_sno_prop)
