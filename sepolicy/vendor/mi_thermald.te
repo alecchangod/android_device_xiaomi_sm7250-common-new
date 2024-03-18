@@ -16,6 +16,9 @@ r_dir_file(mi_thermald, vendor_sysfs_kgsl)
 r_dir_file(mi_thermald, sysfs_leds)
 r_dir_file(mi_thermald, sysfs_thermal)
 
+# Allow mi_thermald to read /sys/class/thermal
+allow mi_thermald sysfs:dir r_dir_perms;
+
 # Allow mi_thermald to read and write to sysfs_*
 allow mi_thermald {
   sysfs_battery_supply 

@@ -1,3 +1,5 @@
+set_prop(vendor_init, audio_prop)
+set_prop(vendor_init, default_prop)
 set_prop(vendor_init, vendor_alarm_boot_prop)
 set_prop(vendor_init, vendor_fod_prop)
 set_prop(vendor_init, vendor_power_prop)
