@@ -1,3 +1,16 @@
 allow untrusted_app_30 zygote:unix_stream_socket { getopt };
 allow untrusted_app_32 zygote:unix_stream_socket { getopt };
 allow untrusted_app zygote:unix_stream_socket { getopt };
+
+allow untrusted_app {
+    postinstall_mnt_dir
+    userdebug_or_eng_prop
+}:{
+    dir
+    file
+} {
+    getattr
+    read
+    open
+};
+allow untrusted_app shell_test_data_file:dir search;
