@@ -60,7 +60,11 @@
     </hal>
     <hal format="hidl" optional="true">
         <name>android.hardware.radio</name>
-        <version>1.0-2</version>
+        <version>1.0-6</version>
+        <interface>
+            <name>IRadio</name>
+            <instance>slot1</instance>
+        </interface>
         <interface>
             <name>ISap</name>
             <instance>slot2</instance>
@@ -172,6 +176,16 @@
             <instance>slot1</instance>
             <instance>slot2</instance>
             <instance>slot3</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>android.hardware.secure_element</name>
+        <version>1.2</version>
+        <interface>
+            <name>ISecureElement</name>
+            <instance>SIM1</instance>
+            <instance>SIM2</instance>
+            <instance>eSE1</instance>
         </interface>
     </hal>
    <hal format="hidl" optional="true">
