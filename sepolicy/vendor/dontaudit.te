@@ -1,0 +1,5 @@
+
+dontaudit {
+  flags_health_check
+  hal_camera_default
+} property_type:file { getattr read write open map };
