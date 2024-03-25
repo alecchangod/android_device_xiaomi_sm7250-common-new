@@ -2,6 +2,5 @@
 dontaudit {
   flags_health_check
   hal_camera_default
-  odrefresh
   zygote
 } property_type:file { getattr read write open map };
