@@ -383,6 +383,10 @@ PRODUCT_VENDOR_PROPERTIES += \
 ro.config.media_vol_steps=30 \
 ro.config.vc_call_vol_steps=10
 
+# Webcam
+PRODUCT_SYSTEM_PROPERTIES += \
+ro.usb.uvc.enabled=true
+
 # WiFi
 PRODUCT_VENDOR_PROPERTIES += \
 wifi.aware.interface=wifi-aware0
