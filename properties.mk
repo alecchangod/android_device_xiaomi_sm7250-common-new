@@ -170,6 +170,11 @@ dalvik.vm.heapsize=512m \
 dalvik.vm.heapstartsize=8m \
 dalvik.vm.heaptargetutilization=0.75
 
+# Dirac
+PRODUCT_VENDOR_PROPERTIES += \
+    persist.vendor.audio.misound.disable=false \
+    ro.vendor.audio.misound.bluetooth.enable=true
+
 # Display
 PRODUCT_VENDOR_PROPERTIES += \
 persist.sys.sf.color_mode=9 \
