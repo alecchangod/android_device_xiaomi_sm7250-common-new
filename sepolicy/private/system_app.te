@@ -3,3 +3,8 @@ hal_client_domain(system_app, hal_mlipay)
 allow system_app {
     tracingproxy_service
 }:service_manager { find };
+
+allow system_app {
+    storaged
+    system_suspend
+}:binder { call };
