@@ -18,3 +18,5 @@ allow init {
   hal_authsecret_hwservice
   hidl_base_hwservice
   }:hwservice_manager { add find };
+
+allow init proc:file { rw_file_perms };
