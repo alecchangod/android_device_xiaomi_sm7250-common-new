@@ -9,6 +9,7 @@ allow system_app vendor_sysfs_battery_supply:file { getattr };
 allow system_app zygote:unix_stream_socket { getopt };
 
 r_dir_file(system_app, vendor_sysfs_battery_supply)
+r_dir_file(system_app, rootfs)
 
 allow system_app {
     hal_audio_default
