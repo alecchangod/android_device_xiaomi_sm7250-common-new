@@ -418,7 +418,11 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-service \
     android.hardware.sensors@2.0 \
     android.hardware.sensors@2.1 \
-    libsensorndkbridge
+    libsensorndkbridge \
+    sensors.udfps
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
 
 # Shim
 PRODUCT_PACKAGES += \
