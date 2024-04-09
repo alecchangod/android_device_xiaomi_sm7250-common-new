@@ -41,4 +41,5 @@
 
     <!-- Screen off FOD -->
     <bool name="config_supportScreenOffFod">true</bool>
+    <bool name="config_supportScreenOffUdfps">true</bool>
 </resources>
