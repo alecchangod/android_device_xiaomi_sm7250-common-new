@@ -21,7 +21,7 @@
      for different hardware and product builds. -->
 <resources>
     <!-- Doze: does this device support STATE_DOZE?  -->
-    <bool name="doze_display_state_supported">true</bool>
+    <bool name="doze_display_state_supported">false</bool>
 
     <!-- Should we vibrate on an icon animation of the shelf. This should only be active if the
      vibrator is capable of subtle vibrations -->
@@ -32,4 +32,11 @@
 
     <!-- Udfps vendor code -->
     <integer name="config_udfps_vendor_code">22</integer>
+    <integer name="config_udfpsVendorCode">22</integer>
+
+    <!-- Whether usage of the proximity sensor during doze is supported -->
+    <bool name="doze_proximity_sensor_supported">false</bool>
+
+    <!-- Use framework FOD dimming instead of kernel dimming -->
+    <bool name="config_udfpsFrameworkDimming">false</bool>
 </resources>
