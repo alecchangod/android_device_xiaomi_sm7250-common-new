@@ -39,6 +39,9 @@
     -->
     <integer name="config_fingerprintSensorLocation">1</integer>
 
+    <!-- The radius of the enrollment progress bar, in dp -->
+    <integer name="config_udfpsEnrollProgressBar" translatable="false">100</integer>
+
     <!-- Whether memory from app_info_settings is available or not. -->
     <bool name="config_show_app_info_settings_memory">true</bool>
 </resources>
