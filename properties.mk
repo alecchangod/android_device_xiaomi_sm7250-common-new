@@ -411,11 +411,11 @@ persist.vendor.sensors.allow_non_default_discovery=true \
 persist.vendor.sensors.debug.hal=0 \
 persist.vendor.sensors.sync_request=true
 
-# SkiaVK Threaded
+# SkiaGL Threaded
 PRODUCT_SYSTEM_PROPERTIES += \
-debug.renderengine.backend=skiavkthreaded \
-debug.hw.renderer=skiavk \
-debug.hwui.renderer=skiavk \
+debug.renderengine.backend=skiaglthreaded \
+debug.hw.renderer=skiagl \
+debug.hwui.renderer=skiagl \
 renderthread.skia.reduceopstasksplitting=true
 
 # Shutdown
