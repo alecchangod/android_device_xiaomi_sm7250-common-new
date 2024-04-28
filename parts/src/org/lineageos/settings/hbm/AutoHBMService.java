@@ -91,7 +91,7 @@ public class AutoHBMService extends Service {
                             Thread.sleep(DELAY_MILLIS);
                         } catch (InterruptedException e) {
                         }
-                        if (lux < threshold) {
+                        if (lux < luxThreshold) {
                             enableHBM(false);
                         }
                     });
