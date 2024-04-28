@@ -104,11 +104,6 @@
                  android:permission="XiaomiDozeService">
         </service>
 
-        <service
-            android:name=".doze.PocketService"
-            android:permission="PocketService">
-        </service>
-
         <activity
             android:name=".thermal.ThermalActivity"
             android:label="@string/thermal_title"
@@ -159,6 +154,6 @@
                 android:name="com.android.settings.summary"
                 android:resource="@string/clear_speaker_summary" />
         </activity>
-
     </application>
+
 </manifest>
