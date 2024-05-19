@@ -39,13 +39,6 @@ ro.vendor.oem.imei2                               u:object_r:vendor_deviceid_pro
 # Sensors
 persist.pressure.diff                   u:object_r:vendor_default_prop:s0
 
-# Power
-vendor.powerhal.state                           u:object_r:vendor_power_prop:s0
-vendor.powerhal.audio                           u:object_r:vendor_power_prop:s0
-vendor.powerhal.lpm                             u:object_r:vendor_power_prop:s0
-vendor.powerhal.init                            u:object_r:vendor_power_prop:s0
-vendor.powerhal.rendering                       u:object_r:vendor_power_prop:s0
-
 # Mlipay
 persist.vendor.sys.pay                          u:object_r:vendor_tee_listener_prop:s0
 
