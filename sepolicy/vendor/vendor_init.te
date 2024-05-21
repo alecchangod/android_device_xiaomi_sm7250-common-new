@@ -7,6 +7,7 @@ set_prop(vendor_init, vendor_video_prop)
 allow vendor_init {
   proc_dirty
   proc
+  proc_sched
   sysfs_ssr_toggle
 }:file w_file_perms;
 
