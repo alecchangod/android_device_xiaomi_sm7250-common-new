@@ -479,13 +479,11 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power-service.lineage-libperfmgr \
-    android.hardware.power@1.2.vendor
+    android.hardware.power-service.pixel-libperfmgr
 
 PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
-    hardware/google/pixel \
-    hardware/lineage/interfaces/power-libperfmgr
+    hardware/google/pixel
 
 # Public libraries
 PRODUCT_COPY_FILES += \
