@@ -576,6 +576,7 @@ PRODUCT_PACKAGES += \
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
+    bootable/deprecated-ota \
     hardware/xiaomi
 
 # Speed profile services and wifi-service to reduce RAM and storage
