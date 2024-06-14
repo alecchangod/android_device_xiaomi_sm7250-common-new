@@ -19,5 +19,6 @@
     <string-array name="config_skuSupportsSecureNfc">
         <item>monet</item>
         <item>vangogh</item>
+        <item>picasso</item>
     </string-array>
 </resources>
