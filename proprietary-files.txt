@@ -718,11 +718,11 @@ vendor/lib64/vendor.qti.hardware.soter@1.0.so
 # Soter service (Tencent)
 -vendor/app/SoterService/SoterService.apk
 
-# Thermal
+# Thermal - from munch-user 13 RKQ1.211001.001 V14.0.6.0.TLMMIXM release-keys
 vendor/bin/mi_thermald
 vendor/etc/init/init.mi_thermald.rc
 
-# Thermal engine
+# Thermal engine - from munch-user 13 RKQ1.211001.001 V14.0.6.0.TLMMIXM release-keys
 vendor/bin/thermal-engine
 vendor/etc/init/init_thermal-engine.rc
 -vendor/lib/libthermalclient.so
