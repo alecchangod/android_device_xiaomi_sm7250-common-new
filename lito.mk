@@ -533,7 +533,9 @@ PRODUCT_PACKAGES += \
 # USB
 PRODUCT_HAS_GADGET_HAL := true
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.3-service-qti
+    usb_compositions.conf \
+    android.hardware.usb@1.3-service-qti \
+    android.hardware.usb.gadget@1.2-service-qti
 
 PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
