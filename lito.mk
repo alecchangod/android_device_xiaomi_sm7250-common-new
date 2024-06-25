@@ -611,6 +611,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.thermal-service.qti
 
+# Update
+AB_OTA_UPDATER := false
+
 # USB
 PRODUCT_HAS_GADGET_HAL := true
 PRODUCT_PACKAGES += \
