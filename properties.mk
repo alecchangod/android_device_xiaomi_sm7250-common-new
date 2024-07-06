@@ -92,7 +92,6 @@ vendor.audio.adm.buffering.ms=6 \
 vendor.audio.dolby.ds2.enabled=true \
 vendor.audio.dolby.ds2.hardbypass=false \
 vendor.audio.enable.mirrorlink=false \
-vendor.audio.flac.sw.decoder.24bit=true \
 vendor.audio.hal.output.suspend.supported=false \
 vendor.audio.hw.aac.encoder=true \
 vendor.audio.mic.status=off \
