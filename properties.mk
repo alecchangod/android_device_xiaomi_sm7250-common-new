@@ -350,7 +350,6 @@ ro.odm.build.media_performance_class=30
 
 PRODUCT_SYSTEM_PROPERTIES += \
 media.aac_51_output_enabled=true \
-media.settings.xml=/vendor/etc/media_profiles_vendor.xml \
 mm.enable.smoothstreaming=true \
 mm.enable.qcom_parser=16711679 \
 mmp.enable.3g2=true \
