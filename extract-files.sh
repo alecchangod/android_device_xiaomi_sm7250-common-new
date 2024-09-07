@@ -68,6 +68,9 @@ if [ -z "${ONLY_FIRMWARE}" ] && [ -z "${ONLY_TARGET}" ]; then
             vendor/lib64/camera/components/com.mi.node.watermark.so)
                 "${PATCHELF}" --add-needed "libwatermark_shim.so" "${2}"
                 ;;
+            vendor/lib64/libwvhidl.so)
+                "${PATCHELF}" --replace-needed "libcrypto.so" "libcrypto-v33.so" "${2}"
+                ;;
         esac
     }
     # Initialize the helper for common device
