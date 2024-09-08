@@ -1,2 +1,5 @@
 # Audio
 vendor.audio.feature.compr_voip.enable=false
+
+# Media
+vendor.media.omx=0
