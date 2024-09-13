@@ -20,3 +20,4 @@ allow init {
   }:hwservice_manager { add find };
 
 allow init proc:file { rw_file_perms };
+allow init sysfs:file { rw_file_perms };
