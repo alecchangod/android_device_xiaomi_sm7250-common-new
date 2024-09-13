@@ -1,0 +1,1 @@
+allow vendor_netmgrd vendor_netmgrd:capability { sys_admin };

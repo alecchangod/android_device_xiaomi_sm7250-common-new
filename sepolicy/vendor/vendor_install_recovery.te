@@ -1,0 +1,1 @@
+allow vendor_install_recovery vendor_install_recovery:capability { sys_admin };
