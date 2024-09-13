@@ -14,7 +14,6 @@ r_dir_file(system_app, rootfs)
 allow system_app {
     hal_audio_default
     hal_health_default
-    hal_lineage_health_default
     hal_nfc_default
     hal_power_default
     hal_vibrator_default

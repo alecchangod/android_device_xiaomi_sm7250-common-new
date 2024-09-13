@@ -1,0 +1,1 @@
+allow kcmdlinectrl kcmdlinectrl:capability { sys_admin };

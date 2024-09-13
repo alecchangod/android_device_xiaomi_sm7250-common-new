@@ -1,8 +1,12 @@
 set_prop(vendor_init, audio_prop)
+set_prop(vendor_init, bluetooth_prop)
+set_prop(vendor_init, config_prop)
 set_prop(vendor_init, default_prop)
+set_prop(vendor_init, future_pm_prop)
 set_prop(vendor_init, vendor_alarm_boot_prop)
 set_prop(vendor_init, vendor_fod_prop)
 set_prop(vendor_init, vendor_video_prop)
+set_prop(vendor_init, vendor_ims_prop)
 
 allow vendor_init {
   proc_dirty
