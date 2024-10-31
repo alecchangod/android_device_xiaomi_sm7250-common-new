@@ -75,7 +75,10 @@ if [ -z "${ONLY_FIRMWARE}" ] && [ -z "${ONLY_TARGET}" ]; then
                 "${PATCHELF}" --add-needed "libwatermark_shim.so" "${2}"
                 ;;
             vendor/lib64/libwvhidl.so)
-                "${PATCHELF}" --replace-needed "libcrypto.so" "libcrypto-v33.so" "${2}"
+                "${PATCHELF}" --add-needed "libcrypto_shim.so" "${2}"
+                ;;
+            vendor/lib64/mediadrm/libwvdrmengine.so)
+                "${PATCHELF}" --add-needed "libcrypto_shim.so" "${2}"
                 ;;
         esac
     }
