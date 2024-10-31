@@ -65,6 +65,12 @@ fi
 if [ -z "${ONLY_FIRMWARE}" ] && [ -z "${ONLY_TARGET}" ]; then
     function blob_fixup() {
         case "${1}" in
+            system_ext/lib64/libwfdmmsrc_system.so)
+                "${PATCHELF}" --add-needed "libgui_shim.so" "${2}"
+                ;;
+            system_ext/lib64/libwfdnative.so)
+                "${PATCHELF}" --add-needed "libinput_shim.so" "${2}"
+                ;;
             vendor/lib64/camera/components/com.mi.node.watermark.so)
                 "${PATCHELF}" --add-needed "libwatermark_shim.so" "${2}"
                 ;;

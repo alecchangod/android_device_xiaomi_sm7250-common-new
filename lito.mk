@@ -592,6 +592,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.media.audio.common.types-V2-cpp \
     libnl \
+    libgui_shim \
+    libinput_shim \
     libwfdaac_vendor \
     vendor.qti.hardware.display.config-V5-ndk
 
