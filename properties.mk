@@ -464,6 +464,10 @@ ro.usb.uvc.enabled=true
 PRODUCT_VENDOR_PROPERTIES += \
 wifi.aware.interface=wifi-aware0
 
+# WFD
+PRODUCT_SYSTEM_PROPERTIES += \
+vendor.wfdservice64=enable
+
 # Zygote
 PRODUCT_SYSTEM_PROPERTIES += \
 persist.device_config.runtime_native.usap_pool_enabled=true \
