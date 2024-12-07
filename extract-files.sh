@@ -71,6 +71,9 @@ if [ -z "${ONLY_FIRMWARE}" ] && [ -z "${ONLY_TARGET}" ]; then
             system_ext/lib64/libwfdnative.so)
                 "${PATCHELF}" --add-needed "libinput_shim.so" "${2}"
                 ;;
+            system_ext/lib64/libwfdservice.so)
+                "${PATCHELF}" --replace-needed "android.media.audio.common.types-V2-cpp.so" "android.media.audio.common.types-V4-cpp.so" "${2}"
+                ;;
             vendor/lib64/camera/components/com.mi.node.watermark.so)
                 "${PATCHELF}" --add-needed "libwatermark_shim.so" "${2}"
                 ;;
