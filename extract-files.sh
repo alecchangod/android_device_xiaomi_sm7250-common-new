@@ -69,6 +69,7 @@ if [ -z "${ONLY_FIRMWARE}" ] && [ -z "${ONLY_TARGET}" ]; then
                 "${PATCHELF}" --add-needed "libgui_shim.so" "${2}"
                 ;;
             system_ext/lib64/libwfdnative.so)
+                "${PATCHELF}" --add-needed "libbinder_shim.so" "${2}"
                 "${PATCHELF}" --add-needed "libinput_shim.so" "${2}"
                 ;;
             system_ext/lib64/libwfdservice.so)

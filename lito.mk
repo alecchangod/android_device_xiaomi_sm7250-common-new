@@ -593,6 +593,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.media.audio.common.types-V4-cpp \
     libnl \
+    libbinder_shim \
     libgui_shim \
     libinput_shim \
     libwfdaac_vendor \
