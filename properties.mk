@@ -311,7 +311,10 @@ persist.sys.fflag.override.settings_enable_monitor_phantom_procs=false
 
 # Fingerprint
 PRODUCT_VENDOR_PROPERTIES += \
-persist.vendor.qfp=false
+persist.vendor.qfp=false \
+persist.vendor.fingerprint.type=udfps_optical \
+persist.vendor.fingerprint.sensor_location=540|2164|90
+
 
 # FRP
 PRODUCT_VENDOR_PROPERTIES += \
