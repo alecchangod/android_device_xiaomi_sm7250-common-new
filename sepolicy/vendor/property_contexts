@@ -18,6 +18,7 @@ persist.vendor.video.dfps.level                 u:object_r:vendor_display_prop:s
 persist.vendor.power.dfps.level                 u:object_r:vendor_display_prop:s0
 
 # Fingerprint
+persist.vendor.fingerprint.        u:object_r:vendor_fingerprint_prop:s0
 gf.debug.                                       u:object_r:vendor_fingerprint_prop:s0
 persist.vendor.fpc.                             u:object_r:vendor_fingerprint_prop:s0
 persist.vendor.sys.fp.                          u:object_r:vendor_fingerprint_prop:s0
