@@ -250,6 +250,11 @@ ro.crypto.volume.options=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized
 PRODUCT_VENDOR_PROPERTIES += \
 persist.vendor.qfp=false
 
+PRODUCT_SYSTEM_PROPERTIES += \
+persist.vendor.fingerprint.type=udfps_optical \
+persist.vendor.fingerprint.sensor_location=540|2164|90
+
+
 # FRP
 PRODUCT_VENDOR_PROPERTIES += \
 ro.frp.pst=/dev/block/bootdevice/by-name/frp
