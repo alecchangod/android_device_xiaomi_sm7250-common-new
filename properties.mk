@@ -418,6 +418,7 @@ ro.com.android.dataroaming=false
 PRODUCT_SYSTEM_PROPERTIES += \
 persist.radio.snapshot_enabled=0 \
 persist.radio.snapshot_timer=0 \
+rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so \
 ro.telephony.default_network=27,27 \
 ro.telephony.iwlan_operation_mode=default
 
