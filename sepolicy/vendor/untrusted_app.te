@@ -7,7 +7,6 @@ allow {
 
 allow untrusted_app {
     postinstall_mnt_dir
-    userdebug_or_eng_prop
 }:{
     dir
     file

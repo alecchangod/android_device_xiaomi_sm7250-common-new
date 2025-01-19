@@ -25,6 +25,3 @@ allow devicesettings_app {
   sysfs_leds
   sysfs_thermal
 }:{ file lnk_file } rw_file_perms;
-
-allow devicesettings_app default_android_hwservice:hwservice_manager find;
-get_prop(devicesettings_app, default_prop);
