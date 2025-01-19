@@ -1,3 +1,10 @@
+# Camera
+ro.camera.req.fmq.                              u:object_r:exported_default_prop:s0
+ro.camera.res.fmq.                              u:object_r:exported_default_prop:s0
+
+# Fingerprint
+persist.sys.fp.                                 u:object_r:vendor_fingerprint_prop:s0
+
 # Global
 ro.boot.hwc              u:object_r:exported_default_prop:s0
 ro.build.flavor          u:object_r:exported_default_prop:s0
@@ -18,3 +25,6 @@ ro.ril.oem.meid                u:object_r:deviceid_prop:s0
 # MIUI
 ro.cust.test            u:object_r:exported_system_prop:s0
 ro.miui.                u:object_r:exported_system_prop:s0
+
+# Sensors
+persist.pressure.diff                   u:object_r:vendor_default_prop:s0

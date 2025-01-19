@@ -10,14 +10,8 @@ allow init proc_last_kmsg:file {
 
 allow init adsprpcd_file:file mounton;
 
-allow init shell_exec:file { execute_no_trans };
 allow init init:capability { sys_nice };
-allow init vendor_file:file { execute execute_no_trans };
+allow init vendor_file:file { execute };
 allow init hwservicemanager:binder { call transfer };
-allow init {
-  hal_authsecret_hwservice
-  hidl_base_hwservice
-  }:hwservice_manager { add find };
 
 allow init proc:file { rw_file_perms };
-allow init sysfs:file { rw_file_perms };
