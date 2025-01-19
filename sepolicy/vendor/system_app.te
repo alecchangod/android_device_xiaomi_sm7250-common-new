@@ -19,11 +19,5 @@ allow system_app {
     hal_vibrator_default
     hal_wifi_default
     hal_wifi_supplicant_default
-    netd
     wificond
 }:binder { call };
-
-allow system_app {
-    system_suspend_control_service
-    system_suspend_control_internal_service
-}:service_manager { find };
