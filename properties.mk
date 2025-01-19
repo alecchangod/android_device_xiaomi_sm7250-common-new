@@ -9,10 +9,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 aaudio.hw_burst_min_usec=2000 \
 aaudio.mmap_exclusive_policy=2 \
 aaudio.mmap_policy=1 \
-af.resampler.quality=7 \
 audio.deep_buffer.media=true \
-audio.offload.buffer.size.kb=32 \
-audio.offload.gapless.enabled=true \
 persist.vendor.audio.ambisonic.auto.profile=false \
 persist.vendor.audio.ambisonic.capture=false \
 persist.vendor.audio.apptype.multirec.enabled=false \
@@ -68,10 +65,6 @@ vendor.audio.feature.usb_offload_burst_mode.enable=true \
 vendor.audio.feature.usb_offload_sidetone_volume.enable=false \
 vendor.audio.feature.vbat.enable=true \
 vendor.audio.feature.wsa.enable=false \
-ro.audio.resampler.psd.stopband=132 \
-ro.audio.resampler.psd.halflength=960 \
-ro.audio.resampler.psd.cutoff_percent=98 \
-ro.audio.resampler.psd.tbwcheat=0 \
 ro.audio.usb.period_us=20375 \
 ro.vendor.audio.game.effect=true \
 ro.vendor.audio.hifi=false \
@@ -126,8 +119,15 @@ vendor.audio_hal.period_size=240 \
 vendor.voice.path.for.pcm.voip=true
 
 PRODUCT_SYSTEM_PROPERTIES += \
+af.resampler.quality=7 \
+audio.offload.buffer.size.kb=256 \
+audio.offload.gapless.enabled=true \
 persist.audio.button_jack.profile=volume \
 persist.audio.button_jack.switch=0 \
+ro.audio.resampler.psd.stopband=132 \
+ro.audio.resampler.psd.halflength=960 \
+ro.audio.resampler.psd.cutoff_percent=98 \
+ro.audio.resampler.psd.tbwcheat=0 \
 ro.qc.sdk.audio.fluencetype=none \
 ro.qc.sdk.audio.ssr=false \
 tunnel.audio.encode=true
@@ -146,7 +146,6 @@ bluetooth.device.class_of_device=90,2,12 \
 bluetooth.hardware.power.operating_voltage_mv=3300 \
 persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac \
 persist.bluetooth.a2dp_offload.disabled=false \
-persist.bluetooth.sbc_hd_higher_bitrate=1 \
 persist.vendor.bt.aac_frm_ctl.enabled=true \
 persist.vendor.bt.aac_vbr_frm_ctl.enabled=true \
 persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptiver2 \
@@ -160,6 +159,7 @@ ro.vendor.bluetooth.wipower=false \
 vendor.qcom.bluetooth.soc=cherokee
 
 PRODUCT_SYSTEM_PROPERTIES += \
+persist.bluetooth.sbc_hd_higher_bitrate=1 \
 persist.vendor.btstack.enable.twsplus=true \
 persist.vendor.btstack.enable.twsplussho=true
 persist.vendor.bt.a2dp.hal.implementation=true
@@ -344,7 +344,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 vendor.gatekeeper.disable_spu=true
 
 # GFX
-PRODUCT_VENDOR_PROPERTIES += \
+PRODUCT_SYSTEM_PROPERTIES += \
 ro.config.avoid_gfx_accel=true
 
 # GPS
@@ -420,16 +420,16 @@ media.stagefright.enable-aac=true \
 media.stagefright.enable-qcp=true \
 media.stagefright.enable-fma2dp=true \
 media.stagefright.enable-scan=true \
-mmp.enable.3g2=true \
 media.stagefright.thumbnail.prefer_hw_codecs=true \
-media.aac_51_output_enabled=true \
-mm.enable.smoothstreaming=true \
-mm.enable.qcom_parser=16711679 \
-persist.mm.enable.prefetch=true \
 ro.odm.build.media_performance_class=30
 
 PRODUCT_SYSTEM_PROPERTIES += \
-media.settings.xml=/vendor/etc/media_profiles_vendor.xml
+media.aac_51_output_enabled=true \
+media.settings.xml=/vendor/etc/media_profiles_vendor.xml \
+mm.enable.smoothstreaming=true \
+mm.enable.qcom_parser=16711679 \
+mmp.enable.3g2=true \
+persist.mm.enable.prefetch=true
 
 # Netflix
 PRODUCT_SYSTEM_PROPERTIES += \
